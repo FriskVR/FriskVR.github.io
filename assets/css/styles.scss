@@ -3,16 +3,9 @@
 @import "{{ site.theme }}";
 
 body {
-  /* Gradient from #eb34b7 to #c034eb */
-  background: linear-gradient(135deg, #eb34b7 0%, #c034eb 100%) !important;
-  background-attachment: fixed !important;
-  min-height: 100vh;
-}
-
-/* This makes your content readable over the bright colors */
-.wrapper {
-  background: rgba(255, 255, 255, 0.9) !important;
-  padding: 30px !important;
-  border-radius: 10px !important;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.15) !important;
+  background: #c034eb; /* Fallback for older browsers */
+  background: linear-gradient(135deg, #c034eb 0%, #eb34b7 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
 }
