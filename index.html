@@ -91,14 +91,23 @@
             text-align: center;
         }
 
+        /* Buttons match nav color */
         button {
-            background: #0756e8;
+            background: #363978;
             color: #fff;
             border: none;
             padding: 0.6rem 1rem;
             border-radius: 6px;
             cursor: pointer;
             margin: 0.25rem;
+            transition: background-color 180ms ease, transform 120ms ease;
+        }
+
+        button:hover,
+        button:focus {
+            background: #2b2f62; /* slightly darker for hover/focus */
+            transform: translateY(-1px);
+            outline: none;
         }
 
         /* Make the embedded iframe responsive and centered inside container */
