@@ -1,2 +1,2 @@
-# JohnDeltaruneCodes.github.io
+# FriskVR.github.io
 Silly site i made as a side project.
