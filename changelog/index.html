@@ -1,1 +1,243 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FriskVR</title>
+    <style>
+        /* Basic Reset & Branding */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #fff;
+            /* Solid background color (image removed) */
+            background: #1f1f1f;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            background: #363978;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-brand a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-brand a:hover {
+            opacity: 0.8;
+        }
+
+        .nav-brand img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .nav-brand strong {
+            font-size: 1.2rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0; /* keep inner padding in .content and section blocks */
+            background: #fff;
+            color: #333;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden; /* ensures rounded corners clip inner elements */
+        }
+
+        /* inner content keeps the padding for text */
+        .content {
+            padding: 2rem 1rem;
+        }
+
+        /* Helper section padding so moved elements inside container get consistent spacing */
+        .section {
+            padding: 1.5rem 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 0 1rem; /* we already have padding in .content, but keep small horizontal spacing */
+        }
+
+        .hero h1 {
+            margin-bottom: 0.5rem;
+            color: #9966cc;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #666;
+            background: transparent;
+        }
+
+        /* Responsive image: sits inside the white container */
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0; /* remove any gap */
+            object-fit: cover;
+            border-radius: 0; /* allow the container's bottom radius to show on iframe below */
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /* Buttons match nav color */
+        button {
+            background: #363978;
+            color: #fff;
+            border: none;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 0.25rem;
+            transition: background-color 180ms ease, transform 120ms ease;
+        }
+
+        button:hover,
+        button:focus {
+            background: #2b2f62; /* slightly darker for hover/focus */
+            transform: translateY(-1px);
+            outline: none;
+        }
+
+        /* Make the embedded iframe responsive and centered inside container */
+        .embed-wrap {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 1.5rem; /* spacing at bottom of container */
+        }
+
+        .embed-wrap iframe {
+            max-width: 100%;
+            width: 300px;
+            height: 80px;
+            border: 0;
+        }
+
+        /* Audio and links centered and spaced nicely */
+        .links-row {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .audio-center {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Small screens: make container margin a little smaller */
+        @media (max-width: 420px) {
+            .content {
+                padding: 1rem;
+            }
+            .section {
+                padding: 1rem;
+            }
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-brand">
+            <a href="https://FriskVR.github.io">
+                <img src="assets/favicon.png" alt="logo">
+                <strong>FriskVR</strong>
+            </a>
+        </div>
+        <div>
+            <a href="friskvr.github.io/changelog">Website Changelog</a>
+            <a href="#about">About</a>
+            <a href="https://github.com/FriskVR">GitHub</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- content keeps padding for text -->
+        <div class="content">
+            <section class="hero">
+                <h1>Changelog</h1>
+                <p>This page lists the changes for FriskVR.github.io.</p>
+            </section>
+
+            <hr>
+
+            <section id="about" class="section" style="padding-top: 0;">
+                <h2>V1.0</h2>
+                <p>Made logo take you to homepage and other minor things</p>
+                <ul></ul>
+            </section>
+        </div>
+
+  <!-- Other links / button (moved OUTSIDE the container so the white card stops at the embed) -->
+  <section class="center" style="margin-top: 1rem;">
+    <p>my other stuff!</p>
+    <div class="links-row" style="margin-bottom: 1rem;">
+      <button onclick="window.location.href='https://www.youtube.com/@Frisk-VR'">
+        YT Channel
+      </button>
+
+      <button onclick="window.location.href='https://www.instagram.com/johndeltarune25/'">
+        Instagram
+      </button>
+
+      <button onclick="window.location.href='https://github.com/JohndeltaruneCodes'">
+        GitHub
+      </button>
+
+       <button onclick="window.location.href='https://johndeltarunecodes.github.io/geodesdkchecker/'">
+          Geode SDK Status
+       </button>
+    </div>
+  </section>
+
+    <footer>
+        <p>&copy; 2026 FriskVR | Built with HTML & CSS</p>
+    </footer>
+
+</body>
+</html>
